@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCF0F08A2D1E048B00B65F8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0892D1E048B00B65F8D /* ContentView.swift */; };
+		FCF0F08C2D1E048C00B65F8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF0F08B2D1E048C00B65F8D /* Assets.xcassets */; };
+		FCF0F08F2D1E048C00B65F8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCF0F08E2D1E048C00B65F8D /* Preview Assets.xcassets */; };
+		FCF0F09A2D1E048C00B65F8D /* Pillar_Faith_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0992D1E048C00B65F8D /* Pillar_Faith_AppTests.swift */; };
+		FCF0F0A42D1E048C00B65F8D /* Pillar_Faith_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0A32D1E048C00B65F8D /* Pillar_Faith_AppUITests.swift */; };
+		FCF0F0A62D1E048C00B65F8D /* Pillar_Faith_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0A52D1E048C00B65F8D /* Pillar_Faith_AppUITestsLaunchTests.swift */; };
+		FCF0F0B32D1E04CB00B65F8D /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0B22D1E04CB00B65F8D /* SplashScreenView.swift */; };
+		FCF0F0B52D1E04E500B65F8D /* ChooseVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0B42D1E04E500B65F8D /* ChooseVersionView.swift */; };
+		FCF0F0B72D1E04FB00B65F8D /* SpiritualJourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0B62D1E04FB00B65F8D /* SpiritualJourneyView.swift */; };
+		FCF0F0B92D1E050F00B65F8D /* SetGoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0B82D1E050F00B65F8D /* SetGoalsView.swift */; };
+		FCF0F0BB2D1E054E00B65F8D /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0BA2D1E054E00B65F8D /* ResultsView.swift */; };
+		FCF0F0BD2D1E056100B65F8D /* BibleUsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0BC2D1E056100B65F8D /* BibleUsageView.swift */; };
+		FCF0F0BF2D1E057700B65F8D /* CommunityWorshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0BE2D1E057700B65F8D /* CommunityWorshipView.swift */; };
+		FCF0F0C12D1E058900B65F8D /* CompassionServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0C02D1E058900B65F8D /* CompassionServiceView.swift */; };
+		FCF0F0C32D1E059F00B65F8D /* PresenceReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0C22D1E059F00B65F8D /* PresenceReflectionView.swift */; };
+		FCF0F0C52D1E05B000B65F8D /* GratitudeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0C42D1E05B000B65F8D /* GratitudeView.swift */; };
+		FCF0F0C72D1E079300B65F8D /* Pillar_Faith_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0C62D1E079300B65F8D /* Pillar_Faith_AppApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCF0F0962D1E048C00B65F8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCF0F07C2D1E048B00B65F8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCF0F0832D1E048B00B65F8D;
+			remoteInfo = Pillar_Faith_App;
+		};
+		FCF0F0A02D1E048C00B65F8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCF0F07C2D1E048B00B65F8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCF0F0832D1E048B00B65F8D;
+			remoteInfo = Pillar_Faith_App;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FCF0F0842D1E048B00B65F8D /* Pillar_Faith_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pillar_Faith_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCF0F0892D1E048B00B65F8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FCF0F08B2D1E048C00B65F8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCF0F08E2D1E048C00B65F8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FCF0F0902D1E048C00B65F8D /* Pillar_Faith_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pillar_Faith_App.entitlements; sourceTree = "<group>"; };
+		FCF0F0952D1E048C00B65F8D /* Pillar_Faith_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pillar_Faith_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCF0F0992D1E048C00B65F8D /* Pillar_Faith_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pillar_Faith_AppTests.swift; sourceTree = "<group>"; };
+		FCF0F09F2D1E048C00B65F8D /* Pillar_Faith_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pillar_Faith_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCF0F0A32D1E048C00B65F8D /* Pillar_Faith_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pillar_Faith_AppUITests.swift; sourceTree = "<group>"; };
+		FCF0F0A52D1E048C00B65F8D /* Pillar_Faith_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pillar_Faith_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FCF0F0B22D1E04CB00B65F8D /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		FCF0F0B42D1E04E500B65F8D /* ChooseVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseVersionView.swift; sourceTree = "<group>"; };
+		FCF0F0B62D1E04FB00B65F8D /* SpiritualJourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiritualJourneyView.swift; sourceTree = "<group>"; };
+		FCF0F0B82D1E050F00B65F8D /* SetGoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalsView.swift; sourceTree = "<group>"; };
+		FCF0F0BA2D1E054E00B65F8D /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		FCF0F0BC2D1E056100B65F8D /* BibleUsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleUsageView.swift; sourceTree = "<group>"; };
+		FCF0F0BE2D1E057700B65F8D /* CommunityWorshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityWorshipView.swift; sourceTree = "<group>"; };
+		FCF0F0C02D1E058900B65F8D /* CompassionServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassionServiceView.swift; sourceTree = "<group>"; };
+		FCF0F0C22D1E059F00B65F8D /* PresenceReflectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceReflectionView.swift; sourceTree = "<group>"; };
+		FCF0F0C42D1E05B000B65F8D /* GratitudeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeView.swift; sourceTree = "<group>"; };
+		FCF0F0C62D1E079300B65F8D /* Pillar_Faith_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pillar_Faith_AppApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCF0F0812D1E048B00B65F8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCF0F0922D1E048C00B65F8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCF0F09C2D1E048C00B65F8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCF0F07B2D1E048B00B65F8D = {
+			isa = PBXGroup;
+			children = (
+				FCF0F0862D1E048B00B65F8D /* Pillar_Faith_App */,
+				FCF0F0982D1E048C00B65F8D /* Pillar_Faith_AppTests */,
+				FCF0F0A22D1E048C00B65F8D /* Pillar_Faith_AppUITests */,
+				FCF0F0852D1E048B00B65F8D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCF0F0852D1E048B00B65F8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCF0F0842D1E048B00B65F8D /* Pillar_Faith_App.app */,
+				FCF0F0952D1E048C00B65F8D /* Pillar_Faith_AppTests.xctest */,
+				FCF0F09F2D1E048C00B65F8D /* Pillar_Faith_AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCF0F0862D1E048B00B65F8D /* Pillar_Faith_App */ = {
+			isa = PBXGroup;
+			children = (
+				FCF0F0892D1E048B00B65F8D /* ContentView.swift */,
+				FCF0F08B2D1E048C00B65F8D /* Assets.xcassets */,
+				FCF0F0902D1E048C00B65F8D /* Pillar_Faith_App.entitlements */,
+				FCF0F08D2D1E048C00B65F8D /* Preview Content */,
+				FCF0F0B22D1E04CB00B65F8D /* SplashScreenView.swift */,
+				FCF0F0B42D1E04E500B65F8D /* ChooseVersionView.swift */,
+				FCF0F0B62D1E04FB00B65F8D /* SpiritualJourneyView.swift */,
+				FCF0F0B82D1E050F00B65F8D /* SetGoalsView.swift */,
+				FCF0F0BA2D1E054E00B65F8D /* ResultsView.swift */,
+				FCF0F0BC2D1E056100B65F8D /* BibleUsageView.swift */,
+				FCF0F0BE2D1E057700B65F8D /* CommunityWorshipView.swift */,
+				FCF0F0C02D1E058900B65F8D /* CompassionServiceView.swift */,
+				FCF0F0C22D1E059F00B65F8D /* PresenceReflectionView.swift */,
+				FCF0F0C42D1E05B000B65F8D /* GratitudeView.swift */,
+				FCF0F0C62D1E079300B65F8D /* Pillar_Faith_AppApp.swift */,
+			);
+			path = Pillar_Faith_App;
+			sourceTree = "<group>";
+		};
+		FCF0F08D2D1E048C00B65F8D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FCF0F08E2D1E048C00B65F8D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FCF0F0982D1E048C00B65F8D /* Pillar_Faith_AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCF0F0992D1E048C00B65F8D /* Pillar_Faith_AppTests.swift */,
+			);
+			path = Pillar_Faith_AppTests;
+			sourceTree = "<group>";
+		};
+		FCF0F0A22D1E048C00B65F8D /* Pillar_Faith_AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FCF0F0A32D1E048C00B65F8D /* Pillar_Faith_AppUITests.swift */,
+				FCF0F0A52D1E048C00B65F8D /* Pillar_Faith_AppUITestsLaunchTests.swift */,
+			);
+			path = Pillar_Faith_AppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCF0F0832D1E048B00B65F8D /* Pillar_Faith_App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCF0F0A92D1E048C00B65F8D /* Build configuration list for PBXNativeTarget "Pillar_Faith_App" */;
+			buildPhases = (
+				FCF0F0802D1E048B00B65F8D /* Sources */,
+				FCF0F0812D1E048B00B65F8D /* Frameworks */,
+				FCF0F0822D1E048B00B65F8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pillar_Faith_App;
+			productName = Pillar_Faith_App;
+			productReference = FCF0F0842D1E048B00B65F8D /* Pillar_Faith_App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCF0F0942D1E048C00B65F8D /* Pillar_Faith_AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCF0F0AC2D1E048C00B65F8D /* Build configuration list for PBXNativeTarget "Pillar_Faith_AppTests" */;
+			buildPhases = (
+				FCF0F0912D1E048C00B65F8D /* Sources */,
+				FCF0F0922D1E048C00B65F8D /* Frameworks */,
+				FCF0F0932D1E048C00B65F8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCF0F0972D1E048C00B65F8D /* PBXTargetDependency */,
+			);
+			name = Pillar_Faith_AppTests;
+			productName = Pillar_Faith_AppTests;
+			productReference = FCF0F0952D1E048C00B65F8D /* Pillar_Faith_AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FCF0F09E2D1E048C00B65F8D /* Pillar_Faith_AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCF0F0AF2D1E048C00B65F8D /* Build configuration list for PBXNativeTarget "Pillar_Faith_AppUITests" */;
+			buildPhases = (
+				FCF0F09B2D1E048C00B65F8D /* Sources */,
+				FCF0F09C2D1E048C00B65F8D /* Frameworks */,
+				FCF0F09D2D1E048C00B65F8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCF0F0A12D1E048C00B65F8D /* PBXTargetDependency */,
+			);
+			name = Pillar_Faith_AppUITests;
+			productName = Pillar_Faith_AppUITests;
+			productReference = FCF0F09F2D1E048C00B65F8D /* Pillar_Faith_AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCF0F07C2D1E048B00B65F8D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					FCF0F0832D1E048B00B65F8D = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					FCF0F0942D1E048C00B65F8D = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FCF0F0832D1E048B00B65F8D;
+					};
+					FCF0F09E2D1E048C00B65F8D = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = FCF0F0832D1E048B00B65F8D;
+					};
+				};
+			};
+			buildConfigurationList = FCF0F07F2D1E048B00B65F8D /* Build configuration list for PBXProject "Pillar_Faith_App" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCF0F07B2D1E048B00B65F8D;
+			productRefGroup = FCF0F0852D1E048B00B65F8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCF0F0832D1E048B00B65F8D /* Pillar_Faith_App */,
+				FCF0F0942D1E048C00B65F8D /* Pillar_Faith_AppTests */,
+				FCF0F09E2D1E048C00B65F8D /* Pillar_Faith_AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCF0F0822D1E048B00B65F8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCF0F08F2D1E048C00B65F8D /* Preview Assets.xcassets in Resources */,
+				FCF0F08C2D1E048C00B65F8D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCF0F0932D1E048C00B65F8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCF0F09D2D1E048C00B65F8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCF0F0802D1E048B00B65F8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCF0F0C12D1E058900B65F8D /* CompassionServiceView.swift in Sources */,
+				FCF0F0BF2D1E057700B65F8D /* CommunityWorshipView.swift in Sources */,
+				FCF0F0B52D1E04E500B65F8D /* ChooseVersionView.swift in Sources */,
+				FCF0F0C32D1E059F00B65F8D /* PresenceReflectionView.swift in Sources */,
+				FCF0F0C72D1E079300B65F8D /* Pillar_Faith_AppApp.swift in Sources */,
+				FCF0F08A2D1E048B00B65F8D /* ContentView.swift in Sources */,
+				FCF0F0B92D1E050F00B65F8D /* SetGoalsView.swift in Sources */,
+				FCF0F0BB2D1E054E00B65F8D /* ResultsView.swift in Sources */,
+				FCF0F0BD2D1E056100B65F8D /* BibleUsageView.swift in Sources */,
+				FCF0F0B72D1E04FB00B65F8D /* SpiritualJourneyView.swift in Sources */,
+				FCF0F0C52D1E05B000B65F8D /* GratitudeView.swift in Sources */,
+				FCF0F0B32D1E04CB00B65F8D /* SplashScreenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCF0F0912D1E048C00B65F8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCF0F09A2D1E048C00B65F8D /* Pillar_Faith_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCF0F09B2D1E048C00B65F8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCF0F0A42D1E048C00B65F8D /* Pillar_Faith_AppUITests.swift in Sources */,
+				FCF0F0A62D1E048C00B65F8D /* Pillar_Faith_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCF0F0972D1E048C00B65F8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCF0F0832D1E048B00B65F8D /* Pillar_Faith_App */;
+			targetProxy = FCF0F0962D1E048C00B65F8D /* PBXContainerItemProxy */;
+		};
+		FCF0F0A12D1E048C00B65F8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCF0F0832D1E048B00B65F8D /* Pillar_Faith_App */;
+			targetProxy = FCF0F0A02D1E048C00B65F8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FCF0F0A72D1E048C00B65F8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCF0F0A82D1E048C00B65F8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FCF0F0AA2D1E048C00B65F8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pillar_Faith_App/Pillar_Faith_App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pillar_Faith_App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.upenn.cis.1951.Pillar-Faith-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FCF0F0AB2D1E048C00B65F8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pillar_Faith_App/Pillar_Faith_App.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pillar_Faith_App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.upenn.cis.1951.Pillar-Faith-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FCF0F0AD2D1E048C00B65F8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.upenn.cis.1951.Pillar-Faith-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pillar_Faith_App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pillar_Faith_App";
+			};
+			name = Debug;
+		};
+		FCF0F0AE2D1E048C00B65F8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.upenn.cis.1951.Pillar-Faith-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pillar_Faith_App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pillar_Faith_App";
+			};
+			name = Release;
+		};
+		FCF0F0B02D1E048C00B65F8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.upenn.cis.1951.Pillar-Faith-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Pillar_Faith_App;
+			};
+			name = Debug;
+		};
+		FCF0F0B12D1E048C00B65F8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.upenn.cis.1951.Pillar-Faith-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Pillar_Faith_App;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCF0F07F2D1E048B00B65F8D /* Build configuration list for PBXProject "Pillar_Faith_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCF0F0A72D1E048C00B65F8D /* Debug */,
+				FCF0F0A82D1E048C00B65F8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCF0F0A92D1E048C00B65F8D /* Build configuration list for PBXNativeTarget "Pillar_Faith_App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCF0F0AA2D1E048C00B65F8D /* Debug */,
+				FCF0F0AB2D1E048C00B65F8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCF0F0AC2D1E048C00B65F8D /* Build configuration list for PBXNativeTarget "Pillar_Faith_AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCF0F0AD2D1E048C00B65F8D /* Debug */,
+				FCF0F0AE2D1E048C00B65F8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCF0F0AF2D1E048C00B65F8D /* Build configuration list for PBXNativeTarget "Pillar_Faith_AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCF0F0B02D1E048C00B65F8D /* Debug */,
+				FCF0F0B12D1E048C00B65F8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCF0F07C2D1E048B00B65F8D /* Project object */;
+}
