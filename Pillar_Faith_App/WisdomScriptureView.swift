@@ -1,14 +1,14 @@
 import SwiftUI
 
-struct CommunityWorshipView: View {
+struct WisdomScriptureView: View {
     @Environment(\.presentationMode) var presentationMode // For dismissing the current view
-    @AppStorage("selectedCommunityInvolvement") private var selectedCommunityInvolvement: String = "" // Persist user choice
-    @State private var progressValue: CGFloat = 0.66 // Updated progress for this view
+    @AppStorage("selectedBibleUsage") private var selectedBibleUsage: String = "" // Persist user choice
+    @State private var progressValue: CGFloat = 0.5 // Updated progress for this view
 
-    let involvementOptions = [
-        "I don’t attend often but want to be more connected.",
-        "I attend services or gatherings a few times a month.",
-        "I actively participate weekly in worship and fellowship."
+    let usageOptions = [
+        "I read it occasionally, but I’m not consistent.",
+        "I read the Bible weekly and reflect on its meaning.",
+        "I study the Bible daily and enjoy deepening my understanding."
     ]
 
     var body: some View {
@@ -26,7 +26,7 @@ struct CommunityWorshipView: View {
                                 .foregroundColor(.black)
                         }
 
-                        Text("Community (Worship and Fellowship)")
+                        Text("Wisdom (Scripture)")
                             .font(.system(size: 18, weight: .semibold))
                             .foregroundColor(.black)
                     }
@@ -46,45 +46,45 @@ struct CommunityWorshipView: View {
                 .padding(.top, 20)
 
                 // Emoji Icon
-                Image("cross_icon")
+                Image("book_icon")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 80)
                     .padding(.top, 8)
 
                 // Main Question
-                Text("How involved are you in church or Christian fellowship activities?")
+                Text("How often do you read or study the Bible?")
                     .font(.system(size: 14))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 16)
 
-                // Involvement Options
+                // Usage Options
                 VStack(spacing: 12) {
-                    ForEach(involvementOptions, id: \.self) { option in
+                    ForEach(usageOptions, id: \.self) { option in
                         Button(action: {
-                            selectedCommunityInvolvement = option // Persist selection
+                            selectedBibleUsage = option // Persist selection
                         }) {
                             Text(option)
                                 .font(.system(size: 14))
                                 .padding()
                                 .frame(maxWidth: .infinity)
-                                .background(selectedCommunityInvolvement == option ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
+                                .background(selectedBibleUsage == option ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
                                 .cornerRadius(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)
-                                        .stroke(selectedCommunityInvolvement == option ? Color.brown : Color.clear, lineWidth: 2)
+                                        .stroke(selectedBibleUsage == option ? Color.brown : Color.clear, lineWidth: 2)
                                 )
-                                .foregroundColor(selectedCommunityInvolvement == option ? .black : .gray)
+                                .foregroundColor(selectedBibleUsage == option ? .black : .gray)
                         }
                     }
                 }
                 .padding(.horizontal, 16)
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity) // Ensure full width
 
                 Spacer(minLength: 40)
 
-                // NavigationLink to CompassionServiceView
-                NavigationLink(destination: CompassionServiceView()) {
+                // NavigationLink to CommunityWorshipView
+                NavigationLink(destination: CommunityWorshipView()) {
                     Text("Next")
                         .font(.system(size: 16))
                         .padding()
