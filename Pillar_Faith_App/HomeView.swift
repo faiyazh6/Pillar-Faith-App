@@ -165,9 +165,9 @@ struct HomeView: View {
         case .abilities:
             return AnyView(Text("Abilities View")) // Replace with actual abilities view
         case .bible:
-            return AnyView(Text("Bible View")) // Replace with actual Bible view
+            return AnyView(BibleView(selectedTab: $selectedTab)) // Replace with actual Bible view
         case .journal:
-            return AnyView(Text("Journal View")) // Replace with actual journal view
+            return AnyView(JournalView(selectedTab: $selectedTab)) // Replace with actual journal view
         }
     }
 }

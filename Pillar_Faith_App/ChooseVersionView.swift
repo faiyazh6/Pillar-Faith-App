@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ChooseVersionView: View {
+    @EnvironmentObject var pillarScores: PillarScores
     @Environment(\.presentationMode) var presentationMode // For dismissing the current view
     @AppStorage("selectedVersion") private var selectedVersion: String = "King James Version (KJV)" // Persistent storage for selected option
 
@@ -89,7 +90,7 @@ struct ChooseVersionView: View {
                         .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
                 }
 
-                NavigationLink(destination: SpiritualJourneyView()) { // Replace with the next view
+                NavigationLink(destination: SpiritualJourneyView().environmentObject(pillarScores)) { // Replace with the next view
                     Text("Next")
                         .font(.subheadline)
                         .foregroundColor(.white)

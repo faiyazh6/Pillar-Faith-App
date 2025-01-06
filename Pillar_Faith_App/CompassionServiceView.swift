@@ -1,14 +1,15 @@
 import SwiftUI
 
 struct CompassionServiceView: View {
+    @EnvironmentObject var pillarScores: PillarScores
     @Environment(\.presentationMode) var presentationMode // For dismissing the current view
     @AppStorage("selectedCompassionFrequency") private var selectedCompassionFrequency: String = "" // Persist user choice
     @State private var progressValue: CGFloat = 0.83 // Updated progress for this view
 
-    let compassionOptions = [
-        "I rarely serve others but want to start small.",
-        "I try to serve and help others a few times a week.",
-        "I regularly dedicate time to serving others with purpose."
+    let compassionOptions: [(String, Int)] = [
+        ("I rarely serve others but want to start small.", 20), 
+        ("I try to serve and help others a few times a week.", 40),
+        ("I regularly dedicate time to serving others with purpose.", 55)
     ]
 
     var body: some View {
@@ -60,21 +61,22 @@ struct CompassionServiceView: View {
 
                 // Compassion Options
                 VStack(spacing: 12) {
-                    ForEach(compassionOptions, id: \.self) { option in
+                    ForEach(compassionOptions, id: \.0) { option in
                         Button(action: {
-                            selectedCompassionFrequency = option // Persist selection
+                            selectedCompassionFrequency = option.0 // Persist selection
+                            updateCompassionScore(score: option.1)
                         }) {
-                            Text(option)
+                            Text(option.0)
                                 .font(.system(size: 14))
                                 .padding()
                                 .frame(maxWidth: .infinity)
-                                .background(selectedCompassionFrequency == option ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
+                                .background(selectedCompassionFrequency == option.0 ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
                                 .cornerRadius(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)
-                                        .stroke(selectedCompassionFrequency == option ? Color.brown : Color.clear, lineWidth: 2)
+                                        .stroke(selectedCompassionFrequency == option.0 ? Color.brown : Color.clear, lineWidth: 2)
                                 )
-                                .foregroundColor(selectedCompassionFrequency == option ? .black : .gray)
+                                .foregroundColor(selectedCompassionFrequency == option.0 ? .black : .gray)
                         }
                     }
                 }
@@ -84,7 +86,7 @@ struct CompassionServiceView: View {
                 Spacer(minLength: 40)
 
                 // NavigationLink to GratitudeView
-                NavigationLink(destination: GratitudeView()) {
+                NavigationLink(destination: PresenceReflectionView().environmentObject(pillarScores)) {
                     Text("Next")
                         .font(.system(size: 16))
                         .padding()
@@ -99,5 +101,12 @@ struct CompassionServiceView: View {
         }
         .navigationBarBackButtonHidden(true)
         .background(Color(UIColor.systemBackground))
+    }
+    
+    // Function to Update Score
+    private func updateCompassionScore(score: Int) {
+        if let index = pillarScores.scores.firstIndex(where: { $0.name == "Compassion" }) {
+            pillarScores.scores[index].score = Double(score)
+        }
     }
 }

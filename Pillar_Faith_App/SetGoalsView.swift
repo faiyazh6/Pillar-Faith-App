@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SetGoalsView: View {
+    @EnvironmentObject var pillarScores: PillarScores
     @Environment(\.presentationMode) var presentationMode // For dismissing the current view
 
     // Persistent storage using @AppStorage
@@ -134,7 +135,7 @@ struct SetGoalsView: View {
                         .foregroundColor(.gray)
                 }
 
-                NavigationLink(destination: BibleUsageView()) {
+                NavigationLink(destination: BibleUsageView().environmentObject(pillarScores)) {
                     Text("Next")
                         .font(.subheadline)
                         .padding()

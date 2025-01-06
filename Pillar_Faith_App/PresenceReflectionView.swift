@@ -1,14 +1,15 @@
 import SwiftUI
 
 struct PresenceReflectionView: View {
+    @EnvironmentObject var pillarScores: PillarScores
     @Environment(\.presentationMode) var presentationMode
     @AppStorage("selectedPresenceReflection") private var selectedPresenceReflection: String = ""
     @State private var progressValue: CGFloat = 1.0
 
-    let reflectionOptions = [
-        "I don’t attend often but want to be more connected.",
-        "I attend services or gatherings a few times a month.",
-        "I actively participate weekly in worship and fellowship."
+    let reflectionOptions: [(String, Int)] = [
+        ("I don’t attend often but want to be more connected.", 20),
+        ("I attend services or gatherings a few times a month.", 40),
+        ("I actively participate weekly in worship and fellowship.", 55)
     ]
 
     var body: some View {
@@ -59,21 +60,22 @@ struct PresenceReflectionView: View {
 
             // Reflection Options
             VStack(spacing: 12) {
-                ForEach(reflectionOptions, id: \.self) { option in
+                ForEach(reflectionOptions, id: \.0) { option in
                     Button(action: {
-                        selectedPresenceReflection = option
+                        selectedPresenceReflection = option.0
+                        updatePresenceScore(score: option.1)
                     }) {
-                        Text(option)
+                        Text(option.0)
                             .font(.system(size: 14))
                             .padding()
                             .frame(maxWidth: .infinity)
-                            .background(selectedPresenceReflection == option ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
+                            .background(selectedPresenceReflection == option.0 ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
                             .cornerRadius(8)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 8)
-                                    .stroke(selectedPresenceReflection == option ? Color.brown : Color.clear, lineWidth: 2)
+                                    .stroke(selectedPresenceReflection == option.0 ? Color.brown : Color.clear, lineWidth: 2)
                             )
-                            .foregroundColor(selectedPresenceReflection == option ? .black : .gray)
+                            .foregroundColor(selectedPresenceReflection == option.0 ? .black : .gray)
                     }
                 }
             }
@@ -94,7 +96,7 @@ struct PresenceReflectionView: View {
                         .foregroundColor(.gray)
                 }
 
-                NavigationLink(destination: GratitudeView()) {
+                NavigationLink(destination: GratitudeView().environmentObject(pillarScores)) {
                     Text("Next")
                         .font(.system(size: 14))
                         .padding()
@@ -109,5 +111,15 @@ struct PresenceReflectionView: View {
         }
         .navigationBarBackButtonHidden(true)
         .background(Color(UIColor.systemBackground))
+    }
+    
+    // Function to Update Score
+    private func updatePresenceScore(score: Int) {
+        if let index = pillarScores.scores.firstIndex(where: { $0.name == "Presence" }) {
+            print("Updating score for Presence at index \(index) to \(score).")
+            pillarScores.scores[index].score = Double(score)
+        } else {
+            print("Error: Presence not found in pillarScores.")
+        }
     }
 }

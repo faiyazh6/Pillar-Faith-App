@@ -1,14 +1,15 @@
 import SwiftUI
 
 struct GratitudeView: View {
+    @EnvironmentObject var pillarScores: PillarScores
     @Environment(\.presentationMode) var presentationMode // For dismissing the current view
     @AppStorage("selectedGratitudeFrequency") private var selectedGratitudeFrequency: String = "" // Persist user choice
     @State private var progressValue: CGFloat = 1.0 // Final progress for this view
 
-    let gratitudeOptions = [
-        "I rarely express gratitude but want to start.",
-        "I try to thank God for His blessings a few times a week.",
-        "I express gratitude daily through prayer or reflection."
+    let gratitudeOptions: [(String, Int)] = [
+        ("I rarely express gratitude but want to start.", 20),
+        ("I try to thank God for His blessings a few times a week.", 40),
+        ("I express gratitude daily through prayer or reflection.", 55)
     ]
 
     var body: some View {
@@ -60,21 +61,22 @@ struct GratitudeView: View {
 
                 // Gratitude Options
                 VStack(spacing: 12) {
-                    ForEach(gratitudeOptions, id: \.self) { option in
+                    ForEach(gratitudeOptions, id: \.0) { option in
                         Button(action: {
-                            selectedGratitudeFrequency = option // Persist selection
+                            selectedGratitudeFrequency = option.0 // Persist selection
+                            updateGratitudeScore(score: option.1)
                         }) {
-                            Text(option)
+                            Text(option.0)
                                 .font(.system(size: 14))
                                 .padding()
                                 .frame(maxWidth: .infinity)
-                                .background(selectedGratitudeFrequency == option ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
+                                .background(selectedGratitudeFrequency == option.0 ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
                                 .cornerRadius(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)
-                                        .stroke(selectedGratitudeFrequency == option ? Color.brown : Color.clear, lineWidth: 2)
+                                        .stroke(selectedGratitudeFrequency == option.0 ? Color.brown : Color.clear, lineWidth: 2)
                                 )
-                                .foregroundColor(selectedGratitudeFrequency == option ? .black : .gray)
+                                .foregroundColor(selectedGratitudeFrequency == option.0 ? .black : .gray)
                         }
                     }
                 }
@@ -84,7 +86,7 @@ struct GratitudeView: View {
                 Spacer(minLength: 40)
 
                 // NavigationLink to ResultsView
-                NavigationLink(destination: ResultsView()) {
+                NavigationLink(destination: ResultsView().environmentObject(pillarScores)) {
                     Text("Next")
                         .font(.system(size: 16))
                         .padding()
@@ -99,5 +101,12 @@ struct GratitudeView: View {
         }
         .navigationBarBackButtonHidden(true)
         .background(Color(UIColor.systemBackground))
+    }
+    
+    // Function to Update Score
+    private func updateGratitudeScore(score: Int) {
+        if let index = pillarScores.scores.firstIndex(where: { $0.name == "Thankfulness" }) {
+            pillarScores.scores[index].score = Double(score)
+        }
     }
 }

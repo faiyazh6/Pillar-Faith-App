@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SpiritualJourneyView: View {
+    @EnvironmentObject var pillarScores: PillarScores
     @Environment(\.presentationMode) var presentationMode // For dismissing the current view
 
     // Persistent storage using @AppStorage
@@ -161,7 +162,7 @@ struct SpiritualJourneyView: View {
                         .foregroundColor(.gray)
                 }
 
-                NavigationLink(destination: SetGoalsView()) {
+                NavigationLink(destination: SetGoalsView().environmentObject(pillarScores)) {
                     Text("Next")
                         .font(.subheadline)
                         .padding()

@@ -30,6 +30,10 @@
 		FCF0F0D12D1F969400B65F8D /* AIPriestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0D02D1F969400B65F8D /* AIPriestView.swift */; };
 		FCF0F0D32D1F9B5500B65F8D /* TaskManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0D22D1F9B5500B65F8D /* TaskManagerView.swift */; };
 		FCF0F0D52D1F9B7D00B65F8D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0D42D1F9B7D00B65F8D /* MainTabView.swift */; };
+		FCF0F0D92D25DDAE00B65F8D /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0D82D25DDAE00B65F8D /* BibleView.swift */; };
+		FCF0F0DB2D25EA6200B65F8D /* BibleStoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0DA2D25EA6200B65F8D /* BibleStoryDetailView.swift */; };
+		FCF0F0DD2D26332800B65F8D /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0DC2D26332800B65F8D /* JournalView.swift */; };
+		FCF0F0DF2D275B8300B65F8D /* PillarScoreManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F0DE2D275B8300B65F8D /* PillarScoreManagerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		FCF0F0D02D1F969400B65F8D /* AIPriestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIPriestView.swift; sourceTree = "<group>"; };
 		FCF0F0D22D1F9B5500B65F8D /* TaskManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerView.swift; sourceTree = "<group>"; };
 		FCF0F0D42D1F9B7D00B65F8D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		FCF0F0D82D25DDAE00B65F8D /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
+		FCF0F0DA2D25EA6200B65F8D /* BibleStoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleStoryDetailView.swift; sourceTree = "<group>"; };
+		FCF0F0DC2D26332800B65F8D /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		FCF0F0DE2D275B8300B65F8D /* PillarScoreManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillarScoreManagerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,10 @@
 				FCF0F0D02D1F969400B65F8D /* AIPriestView.swift */,
 				FCF0F0D22D1F9B5500B65F8D /* TaskManagerView.swift */,
 				FCF0F0D42D1F9B7D00B65F8D /* MainTabView.swift */,
+				FCF0F0D82D25DDAE00B65F8D /* BibleView.swift */,
+				FCF0F0DA2D25EA6200B65F8D /* BibleStoryDetailView.swift */,
+				FCF0F0DC2D26332800B65F8D /* JournalView.swift */,
+				FCF0F0DE2D275B8300B65F8D /* PillarScoreManagerView.swift */,
 			);
 			path = Pillar_Faith_App;
 			sourceTree = "<group>";
@@ -310,19 +322,23 @@
 				FCF0F0C12D1E058900B65F8D /* CompassionServiceView.swift in Sources */,
 				FCF0F0BF2D1E057700B65F8D /* CommunityWorshipView.swift in Sources */,
 				FCF0F0CB2D1F26E200B65F8D /* WisdomScriptureView.swift in Sources */,
+				FCF0F0DF2D275B8300B65F8D /* PillarScoreManagerView.swift in Sources */,
 				FCF0F0CF2D1F8E4700B65F8D /* HomeView.swift in Sources */,
 				FCF0F0B52D1E04E500B65F8D /* ChooseVersionView.swift in Sources */,
 				FCF0F0C32D1E059F00B65F8D /* PresenceReflectionView.swift in Sources */,
 				FCF0F0C72D1E079300B65F8D /* Pillar_Faith_AppApp.swift in Sources */,
 				FCF0F08A2D1E048B00B65F8D /* ContentView.swift in Sources */,
 				FCF0F0B92D1E050F00B65F8D /* SetGoalsView.swift in Sources */,
+				FCF0F0D92D25DDAE00B65F8D /* BibleView.swift in Sources */,
 				FCF0F0D12D1F969400B65F8D /* AIPriestView.swift in Sources */,
 				FCF0F0BB2D1E054E00B65F8D /* ResultsView.swift in Sources */,
 				FCF0F0D52D1F9B7D00B65F8D /* MainTabView.swift in Sources */,
 				FCF0F0BD2D1E056100B65F8D /* BibleUsageView.swift in Sources */,
+				FCF0F0DB2D25EA6200B65F8D /* BibleStoryDetailView.swift in Sources */,
 				FCF0F0CD2D1F8E2200B65F8D /* AuthenticationView.swift in Sources */,
 				FCF0F0B72D1E04FB00B65F8D /* SpiritualJourneyView.swift in Sources */,
 				FCF0F0D32D1F9B5500B65F8D /* TaskManagerView.swift in Sources */,
+				FCF0F0DD2D26332800B65F8D /* JournalView.swift in Sources */,
 				FCF0F0C52D1E05B000B65F8D /* GratitudeView.swift in Sources */,
 				FCF0F0B32D1E04CB00B65F8D /* SplashScreenView.swift in Sources */,
 			);
@@ -493,6 +509,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We use the microphone for voice input so you can ask questions.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We use speech recognition to help you ask questions and receive guidance.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -522,6 +540,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We use the microphone for voice input so you can ask questions.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "We use speech recognition to help you ask questions and receive guidance.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

@@ -15,9 +15,9 @@ struct MainTabView: View {
                 case .abilities:
                     Text("Abilities View") // Replace with actual abilities view
                 case .bible:
-                    Text("Bible View") // Replace with actual Bible view
+                    BibleView(selectedTab: $selectedTab)
                 case .journal:
-                    Text("Journal View") // Replace with actual journal view
+                    JournalView(selectedTab: $selectedTab)
                 }
             }
 

@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct SplashScreenView: View {
+    @EnvironmentObject var pillarScores: PillarScores
+    
     var body: some View {
         VStack(spacing: 20) {
             // Top Image Section
@@ -32,7 +34,7 @@ struct SplashScreenView: View {
             Spacer()
 
             // Get Started Button
-            NavigationLink(destination: ChooseVersionView()) {
+            NavigationLink(destination: ChooseVersionView().environmentObject(pillarScores)) {
                 Text("Get Started")
                     .font(.headline)
                     .foregroundColor(.white)

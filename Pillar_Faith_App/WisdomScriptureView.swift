@@ -1,14 +1,15 @@
 import SwiftUI
 
 struct WisdomScriptureView: View {
+    @EnvironmentObject var pillarScores: PillarScores
     @Environment(\.presentationMode) var presentationMode // For dismissing the current view
     @AppStorage("selectedBibleUsage") private var selectedBibleUsage: String = "" // Persist user choice
     @State private var progressValue: CGFloat = 0.5 // Updated progress for this view
 
-    let usageOptions = [
-        "I read it occasionally, but I’m not consistent.",
-        "I read the Bible weekly and reflect on its meaning.",
-        "I study the Bible daily and enjoy deepening my understanding."
+    let usageOptions: [(String, Int)] = [
+        ("I read it occasionally, but I’m not consistent.", 20),
+        ("I read the Bible weekly and reflect on its meaning.", 40),
+        ("I study the Bible daily and enjoy deepening my understanding.", 55)
     ]
 
     var body: some View {
@@ -60,21 +61,22 @@ struct WisdomScriptureView: View {
 
                 // Usage Options
                 VStack(spacing: 12) {
-                    ForEach(usageOptions, id: \.self) { option in
+                    ForEach(usageOptions, id: \.0) { option in
                         Button(action: {
-                            selectedBibleUsage = option // Persist selection
+                            selectedBibleUsage = option.0 // Persist selection
+                            updateWisdomScore(score: option.1)
                         }) {
-                            Text(option)
+                            Text(option.0)
                                 .font(.system(size: 14))
                                 .padding()
                                 .frame(maxWidth: .infinity)
-                                .background(selectedBibleUsage == option ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
+                                .background(selectedBibleUsage == option.0 ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
                                 .cornerRadius(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)
-                                        .stroke(selectedBibleUsage == option ? Color.brown : Color.clear, lineWidth: 2)
+                                        .stroke(selectedBibleUsage == option.0 ? Color.brown : Color.clear, lineWidth: 2)
                                 )
-                                .foregroundColor(selectedBibleUsage == option ? .black : .gray)
+                                .foregroundColor(selectedBibleUsage == option.0 ? .black : .gray)
                         }
                     }
                 }
@@ -84,7 +86,7 @@ struct WisdomScriptureView: View {
                 Spacer(minLength: 40)
 
                 // NavigationLink to CommunityWorshipView
-                NavigationLink(destination: CommunityWorshipView()) {
+                NavigationLink(destination: CommunityWorshipView().environmentObject(pillarScores)) {
                     Text("Next")
                         .font(.system(size: 16))
                         .padding()
@@ -99,5 +101,12 @@ struct WisdomScriptureView: View {
         }
         .navigationBarBackButtonHidden(true)
         .background(Color(UIColor.systemBackground))
+    }
+    
+    // Function to Update Score
+    private func updateWisdomScore(score: Int) {
+        if let index = pillarScores.scores.firstIndex(where: { $0.name == "Wisdom" }) {
+            pillarScores.scores[index].score = Double(score)
+        }
     }
 }

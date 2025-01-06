@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ResultsView: View {
+    @EnvironmentObject var pillarScores: PillarScores // Access the shared scores
     @Environment(\.presentationMode) var presentationMode // For dismissing the current view
     @State private var navigateToOnboardingComplete = false // Navigation trigger for the next view
     @State private var showSubscription = false // State for showing the subscription pop-up
@@ -53,7 +54,7 @@ struct ResultsView: View {
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.gray.opacity(0.3), lineWidth: 1)
                         
-                        RadarChartView(scores: pillarData.map { $0.score })
+                        RadarChartView(scores: pillarScores.scores.map { $0.score }) // Dynamic scores
                             .padding(16)
                     }
                     .frame(height: 240)
@@ -66,7 +67,7 @@ struct ResultsView: View {
                             .padding(.horizontal, 16)
                         
                         LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 16), count: 2), spacing: 16) {
-                            ForEach(pillarData, id: \.id) { pillar in
+                            ForEach(pillarScores.scores) { pillar in
                                 VStack {
                                     ZStack {
                                         RoundedRectangle(cornerRadius: 12)
@@ -246,6 +247,7 @@ struct RadarChartView: View {
             ZStack {
                 drawGrid(center: center, radius: radius, layers: 5, labels: labels)
                 drawDataLayer(center: center, radius: radius, scores: scores)
+                drawLabels(center: center, radius: radius, labels: labels)
             }
             .frame(width: size, height: size)
         }
@@ -267,6 +269,22 @@ struct RadarChartView: View {
             RadarPath(sides: scores.count, dataPoints: dataPoints, center: center)
                 .fill(Color.blue.opacity(0.2))
                 .overlay(RadarPath(sides: scores.count, dataPoints: dataPoints, center: center).stroke(Color.blue, lineWidth: 2))
+        }
+    }
+    
+    // Function to draw labels
+    private func drawLabels(center: CGPoint, radius: CGFloat, labels: [String]) -> some View {
+        ZStack {
+            ForEach(0..<labels.count, id: \.self) { i in
+                let angle = 2 * .pi * CGFloat(i) / CGFloat(labels.count)
+                let labelX = center.x + (radius + 20) * cos(angle) // Adjust distance
+                let labelY = center.y + (radius + 20) * sin(angle)
+
+                Text(labels[i])
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                    .position(x: labelX, y: labelY)
+            }
         }
     }
 }
@@ -323,11 +341,11 @@ struct Pillar: Identifiable {
     let score: Double
 }
 
-let pillarData = [
-    Pillar(name: "Faith", score: 93.09),
-    Pillar(name: "Wisdom", score: 93.09),
-    Pillar(name: "Community", score: 93.09),
-    Pillar(name: "Compassion", score: 93.09),
-    Pillar(name: "Presence", score: 93.09),
-    Pillar(name: "Thankfulness", score: 93.09)
-]
+//let pillarData = [
+//    Pillar(name: "Faith", score: 93.09),
+//    Pillar(name: "Wisdom", score: 93.09),
+//    Pillar(name: "Community", score: 93.09),
+//    Pillar(name: "Compassion", score: 93.09),
+//    Pillar(name: "Presence", score: 93.09),
+//    Pillar(name: "Thankfulness", score: 93.09)
+//]

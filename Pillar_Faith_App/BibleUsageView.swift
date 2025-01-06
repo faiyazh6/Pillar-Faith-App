@@ -1,14 +1,15 @@
 import SwiftUI
 
 struct BibleUsageView: View {
+    @EnvironmentObject var pillarScores: PillarScores
     @Environment(\.presentationMode) var presentationMode // For dismissing the current view
     @AppStorage("selectedPrayerConsistency") private var selectedPrayerConsistency: String = "" // Persist user choice
     @State private var progressValue: CGFloat = 0.33 // Initial progress for this view
 
-    let prayerOptions = [
-        "I rarely pray, but I want to start",
-        "I pray sometimes, but I could be more consistent.",
-        "I pray daily and want to deepen my prayer life."
+    let prayerOptions: [(String, Int)] = [
+        ("I rarely pray, but I want to start", 20),
+        ("I pray sometimes, but I could be more consistent.", 40),
+        ("I pray daily and want to deepen my prayer life.", 55)
     ]
 
     var body: some View {
@@ -60,21 +61,22 @@ struct BibleUsageView: View {
 
                 // Prayer Options
                 VStack(spacing: 12) {
-                    ForEach(prayerOptions, id: \.self) { option in
+                    ForEach(prayerOptions, id: \.0) { option in
                         Button(action: {
-                            selectedPrayerConsistency = option // Persist selection
+                            selectedPrayerConsistency = option.0 // Persist selection
+                            updateFaithScore(score: option.1)
                         }) {
-                            Text(option)
+                            Text(option.0)
                                 .font(.system(size: 14))
                                 .padding()
                                 .frame(maxWidth: .infinity)
-                                .background(selectedPrayerConsistency == option ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
+                                .background(selectedPrayerConsistency == option.0 ? Color.brown.opacity(0.2) : Color.gray.opacity(0.1))
                                 .cornerRadius(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)
-                                        .stroke(selectedPrayerConsistency == option ? Color.brown : Color.clear, lineWidth: 2)
+                                        .stroke(selectedPrayerConsistency == option.0 ? Color.brown : Color.clear, lineWidth: 2)
                                 )
-                                .foregroundColor(selectedPrayerConsistency == option ? .black : .gray)
+                                .foregroundColor(selectedPrayerConsistency == option.0 ? .black : .gray)
                         }
                     }
                 }
@@ -84,7 +86,7 @@ struct BibleUsageView: View {
                 Spacer(minLength: 40)
 
                 // NavigationLink to WisdomScriptureView
-                NavigationLink(destination: WisdomScriptureView()) {
+                NavigationLink(destination: WisdomScriptureView().environmentObject(pillarScores)) {
                     Text("Next")
                         .font(.system(size: 16))
                         .padding()
@@ -96,8 +98,23 @@ struct BibleUsageView: View {
                 .padding(.horizontal, 16)
                 .padding(.bottom, 40)
             }
+            .onAppear {
+                print("Entered BibleUsageView")
+            }
         }
         .navigationBarBackButtonHidden(true)
         .background(Color(UIColor.systemBackground))
+    }
+    
+    // Function to Update Faith Score
+    private func updateFaithScore(score: Int) {
+        if let index = pillarScores.scores.firstIndex(where: { $0.name == "Faith" }) {
+            print("Updating score for Faith at index \(index) to \(score).")
+            DispatchQueue.main.async {
+                self.pillarScores.scores[index].score = Double(score)
+            }
+        } else {
+            print("Error: Faith not found in pillarScores.")
+        }
     }
 }
